@@ -15,6 +15,7 @@
 
         #{$self}__background {
             background-color: rgba(black, 0.5);
+            pointer-events: unset;
         }
 
         #{$self}__container {
@@ -29,6 +30,7 @@
         bottom: 0;
         left: 0;
         transition: .3s;
+        pointer-events: none;
     }
 
     &__container {
