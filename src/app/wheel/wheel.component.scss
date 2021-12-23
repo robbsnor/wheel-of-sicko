@@ -1,0 +1,21 @@
+.wheel {
+    width: 900px;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 80px;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    &__wheel {
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        border-radius: 999px;
+        margin: 0 auto;
+        margin-top: 200px;
+
+    }
+}
