@@ -1,0 +1,7 @@
+<div [ngClass]="{'drawer--open': drawerIsOpen}" class="drawer">
+    <div (click)="closeDrawer()" class="drawer__background"></div>
+    <div class="drawer__container">
+        <div (click)="toggleDrawer()" class="drawer__lip"></div>
+        <ng-content></ng-content>
+    </div>
+</div>
