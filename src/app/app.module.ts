@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { WheelComponent } from './wheel/wheel.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { IconsModule } from './icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,10 @@ import { DrawerComponent } from './drawer/drawer.component';
     ListComponent,
     WheelComponent,
     DrawerComponent
-  ],
-  imports: [
-    BrowserModule
+],
+imports: [
+    BrowserModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

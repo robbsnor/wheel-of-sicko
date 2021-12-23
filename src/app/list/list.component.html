@@ -1,9 +1,16 @@
 <app-drawer>
     <h2>Voeg naam toe aan het rad</h2>
-    <input #newItem type="text">
-    <button (click)="addItem(newItem.value); newItem.value=''">add</button>
+    <div class="form__group">
+        <input #newItem type="text" placeholder="Markel Borsato"  class="list__add-new-input">
+        <button (click)="addItem(newItem.value); newItem.value=''" class="list__add-new-button"><i-feather name="plus"></i-feather></button>
+    </div>
+    <p></p>
+    <p></p>
     <h2>Nu in het rad</h2>
-    <ul>
-        <li *ngFor="let item of list">{{ item }} <button (click)="deleteItem(item)">x</button></li>
+    <ul class="list">
+        <li *ngFor="let item of list" class=list__item>
+            <span class="list__text">{{ item }}</span>
+            <button (click)="deleteItem(item)" class="list__delete"><i-feather name="x"></i-feather></button>
+        </li>
     </ul>
 </app-drawer>

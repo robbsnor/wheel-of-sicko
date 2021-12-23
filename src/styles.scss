@@ -1,3 +1,5 @@
+@import 'normalize.css';
+
 *,
 *:before,
 *:after {
@@ -15,13 +17,80 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Buran USSR', sans-serif;
+    font-weight: normal;
+    margin-bottom: 1rem;
 }
 
-input {
-    padding: 20px;
+h2 {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+
+
+
+.list {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 11px 17px;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        border: none;
+    }
+
+    &__text {
+        display: block;
+        width: 100%;
+        padding: 11px 17px;
+        border-radius: 5px;
+        background-color: rgba(white, 0.2);
+    }
+
+    &__delete {
+        margin-left: 20px;
+        padding: 11px;
+        width: auto;
+        display: grid;
+        place-items: center;
+    }
+}
+
+// form
+.form__group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 11px 17px;
     background-color: rgba(white, 0.2);
     color: white;
     border-radius: 5px;
     outline: none;
-    border: none
+    border: none;
+}
+
+input {
+}
+
+button {
+    cursor: pointer;
 }

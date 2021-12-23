@@ -19,6 +19,10 @@ export class ListService {
     }
 
     addItem(item: string) {
+        if(item === '') {
+            return
+        }
+
         this.list.push(item);
     }
 

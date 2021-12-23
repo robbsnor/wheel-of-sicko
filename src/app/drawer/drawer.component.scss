@@ -42,8 +42,6 @@
 
         background: #000000;
 
-        padding: 0 40px;
-        padding-top: 20px;
         margin: 0 auto;
         margin-top: -50px;
 
@@ -57,13 +55,21 @@
         z-index: 1;
     }
 
+    &__header {
+        padding: 20px;
+        cursor: pointer;
+    }
+
     &__lip {
         margin: 0 auto;
         width: 200px;
         height: 10px;
         background-color: rgba(white, .2);
         border-radius: 999px;
-        margin-bottom: 20px;
         cursor: pointer;
+    }
+
+    &__body {
+        padding: 40px;
     }
 }
