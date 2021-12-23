@@ -1,5 +1,9 @@
 <div class="wheel">
     <h1 class="wheel__title">Wheel Of Sicko</h1>
 
-    <div class="wheel__wheel"></div>
+    <div class="wheel__wheel">
+        <ul>
+            <li *ngFor="let item of list">{{ item }} </li>
+        </ul>
+    </div>
 </div>

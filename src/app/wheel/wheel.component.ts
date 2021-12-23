@@ -15,6 +15,11 @@ export class WheelComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        this.getList();
+    }
+
+    getList():void {
+
         this.listService.getList().subscribe(list => {
             this.list = list;
         })
