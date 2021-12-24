@@ -1,0 +1,23 @@
+.form {
+
+    &__group {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__input,
+    &__button {
+        display: block;
+        width: 100%;
+        padding: 11px 17px;
+        background-color: rgba(white, 0.2);
+        color: white;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+}

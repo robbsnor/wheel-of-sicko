@@ -1,34 +1,12 @@
 @import 'normalize.css';
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import './assets/styles/var';
+@import './assets/styles/base';
+@import './assets/styles/type';
 
-body {
-    background-color: #6441A5;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.25rem;
-}
+@import './assets/styles/components/form';
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Buran USSR', sans-serif;
-    font-weight: normal;
-    margin-bottom: 1rem;
-}
 
-h2 {
-    font-size: 32px;
-    margin-top: 0;
-}
-
-p {
-    padding-bottom: 1rem;
-}
 
 
 
@@ -70,27 +48,3 @@ p {
     }
 }
 
-// form
-.form__group {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-input,
-button {
-    display: block;
-    width: 100%;
-    padding: 11px 17px;
-    background-color: rgba(white, 0.2);
-    color: white;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-}
-
-input {
-}
-
-button {
-    cursor: pointer;
-}
