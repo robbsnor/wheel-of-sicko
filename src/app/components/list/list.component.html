@@ -1,16 +1,14 @@
 <app-drawer>
     <h2>Voeg naam toe aan het rad</h2>
     <div class="form__group">
-        <input #newItem type="text" placeholder="Markel Borsato"  class="list__add-new-input">
-        <button (click)="addItem(newItem.value); newItem.value=''" class="list__add-new-button"><i-feather name="plus"></i-feather></button>
+        <input #newItem type="text" placeholder="Markel Borsato"  class="form__input">
+        <button (click)="addItem(newItem.value); newItem.value=''" class="form__button"><i-feather name="plus"></i-feather></button>
     </div>
-    <p></p>
-    <p></p>
 
 
 
-    <h3>Titel</h3>
-    <input type="text" #newTitle (input)="setTitle(newTitle.value)">
+    <h2>Titel</h2>
+    <input type="text" #newTitle (input)="setTitle(newTitle.value)" class="form__input">
     <small>{{ title }}</small>
 
 

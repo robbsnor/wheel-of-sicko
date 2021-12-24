@@ -6,7 +6,7 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 })
 export class WheelService {
 
-    private title = new BehaviorSubject('First Message');
+    private title = new BehaviorSubject('Wheel Of Sicko');
     title$ = this.title.asObservable();
 
     public list: string[] = [
@@ -30,7 +30,7 @@ export class WheelService {
             return
         }
 
-        this.list.push(item);
+        this.list.unshift(item);
     }
 
     removeItem(item: string) {
