@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class WheelService {
+
+    private title = new BehaviorSubject('First Message');
+    sharedTitle = this.title.asObservable();
 
     public list: string[] = [
         'Bobby',
@@ -13,6 +16,10 @@ export class WheelService {
     ];
 
     constructor() {}
+
+    setTitle(title: string) {
+        this.title.next(title)
+    }
 
     getList(): Observable<string[]> {
         return of(this.list)

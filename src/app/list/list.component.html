@@ -6,6 +6,14 @@
     </div>
     <p></p>
     <p></p>
+
+
+
+    <h3>Titel</h3>
+    <input type="text" #newTitle (input)="setTitle(newTitle.value)">
+    <small>{{ title }}</small>
+
+
     <h2>Nu in het rad</h2>
     <ul class="list">
         <li *ngFor="let item of list" class=list__item>

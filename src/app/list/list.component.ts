@@ -7,7 +7,7 @@ import { WheelService } from 'src/app/wheel.service';
     styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
+    public title: string = '';
     public list: string[] = [];
 
     constructor(
@@ -15,9 +15,15 @@ export class ListComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        this.wheelService.sharedTitle.subscribe(message => this.title = message)
+
         this.wheelService.getList().subscribe(list => {
             this.list = list;
         });
+    }
+
+    setTitle(newTitle: string) {
+        this.wheelService.setTitle(newTitle);
     }
 
     addItem(item: string): void {
