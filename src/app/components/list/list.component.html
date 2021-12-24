@@ -13,10 +13,10 @@
 
 
     <h2>Nu in het rad</h2>
-    <ul class="list">
-        <li *ngFor="let item of list" class=list__item>
-            <span class="list__text">{{ item }}</span>
-            <button (click)="deleteItem(item)" class="list__delete"><i-feather name="x"></i-feather></button>
+    <ul>
+        <li *ngFor="let item of list" class="form__group">
+            <span class="form__input">{{ item }}</span>
+            <button (click)="deleteItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
 </app-drawer>

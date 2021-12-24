@@ -10,9 +10,17 @@ export class WheelService {
     title$ = this.title.asObservable();
 
     public list: string[] = [
-        'Bobby',
+        'Pino',
         'Buurman en Buurman',
-        'Barrel'
+        'Charmander',
+        'Karbonkel',
+        'Mario',
+        'Luigi',
+        'Kapitein koek',
+        'Freek Fonk',
+        'Bear Gryls',
+        'Jochem Meijer',
+        'Die man van Waku Waku'
     ];
 
     constructor() {}
