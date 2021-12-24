@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListService } from 'src/list.service';
+import { WheelService } from 'src/app/wheel.service';
 
 @Component({
     selector: 'app-wheel',
@@ -11,7 +11,7 @@ export class WheelComponent implements OnInit {
     public list: string[] = [];
 
     constructor(
-        private listService: ListService
+        private wheelService: WheelService
     ) {}
 
     ngOnInit(): void {
@@ -20,7 +20,7 @@ export class WheelComponent implements OnInit {
 
     getList():void {
 
-        this.listService.getList().subscribe(list => {
+        this.wheelService.getList().subscribe(list => {
             this.list = list;
         })
     }
