@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.wheelService.sharedTitle.subscribe(message => this.title = message)
+        this.wheelService.title$.subscribe(message => this.title = message)
 
         this.wheelService.getList().subscribe(list => {
             this.list = list;

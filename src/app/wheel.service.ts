@@ -7,7 +7,7 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 export class WheelService {
 
     private title = new BehaviorSubject('First Message');
-    sharedTitle = this.title.asObservable();
+    title$ = this.title.asObservable();
 
     public list: string[] = [
         'Bobby',

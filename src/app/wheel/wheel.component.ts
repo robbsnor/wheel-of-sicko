@@ -17,7 +17,7 @@ export class WheelComponent implements OnInit {
 
     ngOnInit(): void {
         this.getList();
-        this.wheelService.sharedTitle.subscribe(title => this.title = title)
+        this.wheelService.title$.subscribe(title => this.title = title)
     }
 
     getList():void {
