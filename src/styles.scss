@@ -1,10 +1,11 @@
 @import 'normalize.css';
 
-@import './styles/var';
-@import './styles/base';
-@import './styles/type';
+@import 'styles/var';
+@import 'styles/base';
+@import 'styles/type';
 
-@import './styles/components/form';
+@import 'styles/components/components';
+@import 'styles/mixins/mixins';
 
 
 
