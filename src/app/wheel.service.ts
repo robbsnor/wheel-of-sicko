@@ -44,7 +44,7 @@ export class WheelService {
 
     public activeBackground = new BehaviorSubject<Background>(
         {
-            image: 'black.jpg',
+            image: 'sicko.jpg',
             css: ''
         }
     )

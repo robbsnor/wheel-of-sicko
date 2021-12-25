@@ -2,25 +2,15 @@
     $self: &;
 
     position: fixed;
-    top: 100vh;
     right: 0;
-    bottom: 0;
     left: 0;
-    padding: 0 20px;
+    bottom: calc(-100vh +  50px);
+    height: 100vh;
     z-index: 100;
     transition: .3s;
 
     &--open {
-        top: 0;
-
-        #{$self}__background {
-            background-color: rgba(black, 0.5);
-            pointer-events: unset;
-        }
-
-        #{$self}__container {
-            margin-top: 20vh;
-        }
+        bottom: -20vh;
     }
 
     &__background {
@@ -44,7 +34,7 @@
         // background-color: orange;
 
         margin: 0 auto;
-        margin-top: -50px;
+        // margin-top: -50px;
 
         box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
         border-radius: 20px 20px 0 0;
