@@ -9,6 +9,7 @@ import { DrawerComponent } from './components/drawer/drawer.component';
 import { IconsModule } from './modules/icons/icons.module';
 import { IndexComponent } from './pages/index/index.component';
 import { AboutComponent } from './pages/about/about.component';
+import { BackgroundPickerComponent } from './components/background-picker/background-picker.component';
 
 const appRoutes: Routes = [
     { path: '', component: IndexComponent },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
         WheelComponent,
         DrawerComponent,
         IndexComponent,
-        AboutComponent
+        AboutComponent,
+        BackgroundPickerComponent
     ],
     imports: [
         BrowserModule,
