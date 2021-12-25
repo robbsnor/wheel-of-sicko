@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { WheelService } from 'src/app/wheel.service';
+
 
 @Component({
     selector: 'app-index',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-    constructor() {}
+
+    constructor(
+        private wheelService: WheelService,
+        private titleService:Title
+    ) {
+        this.wheelService.title$.subscribe(title =>
+            this.titleService.setTitle(title)
+        )
+    }
 
     ngOnInit(): void {}
 
