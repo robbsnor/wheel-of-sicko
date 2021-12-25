@@ -1,12 +1,36 @@
 @import '../../../styles/mixins/mixins';
 
-.wheel {
+:host {
+    display: block;
     min-height: 100vh;
-    background-image: url('/assets/img/sicko.jpg');
-    background-repeat: repeat;
-    background-size: 300px;
-    animation: sickoBg 20s linear infinite;
-    background-position: 0 0;
+}
+
+.wheel {
+    height: 100%;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-image: url('/assets/img/sicko.jpg');
+        // opacity: .5;
+        // background-size: cover;
+        background-repeat: repeat;
+        background-size: 300px;
+        animation: sickoBg 20s linear infinite;
+        background-position: 0 0;
+
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
 
     &__title {
         font-size: 80px;

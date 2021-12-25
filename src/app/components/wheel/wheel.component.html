@@ -1,9 +1,13 @@
 <div class="wheel">
-    <h1 class="wheel__title">{{ title }}</h1>
+    <div class="wheel__background"></div>
 
-    <div class="wheel__wheel">
-        <ul>
-            <li *ngFor="let item of wheelItems">{{ item }} </li>
-        </ul>
+    <div class="wheel__container">
+        <h1 class="wheel__title">{{ title }}</h1>
+
+        <div class="wheel__wheel">
+            <ul>
+                <li *ngFor="let item of wheelItems">{{ item }} </li>
+            </ul>
+        </div>
     </div>
 </div>
