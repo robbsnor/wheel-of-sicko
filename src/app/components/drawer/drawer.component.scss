@@ -11,6 +11,11 @@
 
     &--open {
         bottom: -20vh;
+
+        #{$self}__background {
+            pointer-events: initial;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     }
 
     &__background {
