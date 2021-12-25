@@ -7,8 +7,8 @@ import { ListComponent } from './components/list/list.component';
 import { WheelComponent } from './components/wheel/wheel.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { IconsModule } from './modules/icons/icons.module';
-import { IndexComponent } from './components/index/index.component';
-import { AboutComponent } from './components/about/about.component';
+import { IndexComponent } from './pages/index/index.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const appRoutes: Routes = [
     { path: '', component: IndexComponent },
