@@ -9,21 +9,14 @@ import { WheelService } from 'src/app/wheel.service';
 export class WheelComponent implements OnInit {
 
     public title: string = '';
-    public list: string[] = [];
+    public wheelItems: string[] = [];
 
     constructor(
         private wheelService: WheelService
     ) {}
 
     ngOnInit(): void {
-        this.getList();
-        this.wheelService.title.subscribe(title => this.title = title)
-    }
-
-    getList():void {
-
-        this.wheelService.getList().subscribe(list => {
-            this.list = list;
-        })
+        this.wheelService.title.subscribe(title => this.title = title);
+        this.wheelService.wheelItems.subscribe(wheelItems => this.wheelItems = wheelItems);
     }
 }

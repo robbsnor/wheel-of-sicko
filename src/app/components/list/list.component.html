@@ -2,7 +2,7 @@
     <h2>Voeg naam toe aan het rad</h2>
     <div class="form__group">
         <input #newItem type="text" placeholder="Markel Borsato"  class="form__input">
-        <button (click)="addItem(newItem.value); newItem.value=''" class="form__button"><i-feather name="plus"></i-feather></button>
+        <button (click)="addWheelItem(newItem.value)" class="form__button"><i-feather name="plus"></i-feather></button>
     </div>
 
 
@@ -14,9 +14,9 @@
 
     <h2>Nu in het rad</h2>
     <ul>
-        <li *ngFor="let item of list" class="form__group">
+        <li *ngFor="let item of wheelItems" class="form__group">
             <span class="form__input">{{ item }}</span>
-            <button (click)="deleteItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
+            <button class="form__button"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
 </app-drawer>

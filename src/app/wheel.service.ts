@@ -7,8 +7,7 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 export class WheelService {
 
     public title = new BehaviorSubject('Wheel Of Sicko');
-
-    public list: string[] = [
+    public wheelItems = new BehaviorSubject([
         'Pino',
         'Buurman en Buurman',
         'Charmander',
@@ -20,7 +19,7 @@ export class WheelService {
         'Bear Gryls',
         'Jochem Meijer',
         'Die man van Waku Waku'
-    ];
+    ]);
 
     constructor() {}
 
@@ -28,22 +27,11 @@ export class WheelService {
         this.title.next(title)
     }
 
-    getList(): Observable<string[]> {
-        return of(this.list)
-    }
-
-    addItem(item: string) {
-        if(item === '') {
-            return
+    addWheelItem(item: string):void {
+        if (this.wheelItems.getValue().includes(item)) {
+            return;
         }
 
-        this.list.unshift(item);
-    }
-
-    removeItem(item: string) {
-        var index = this.list.indexOf(item);
-        if (index !== -1) {
-            this.list.splice(index, 1);
-        }
+        this.wheelItems.next(this.wheelItems.getValue().concat(item));
     }
 }
