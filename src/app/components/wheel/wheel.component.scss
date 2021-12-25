@@ -1,7 +1,7 @@
 @import '../../../styles/mixins/mixins';
 
 .wheel {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('/assets/img/sicko.jpg');
     background-repeat: repeat;
     background-size: 300px;
