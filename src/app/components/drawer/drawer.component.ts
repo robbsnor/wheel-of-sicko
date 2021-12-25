@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class DrawerComponent implements OnInit {
     public drawerIsOpen = false;
 
-    constructor() {}
+    constructor() {
+        document.addEventListener('keypress', (e:KeyboardEvent) => {
+            if (e.key === 'f') { this.toggleDrawer(); }
+        });
+    }
 
     ngOnInit(): void {}
 
