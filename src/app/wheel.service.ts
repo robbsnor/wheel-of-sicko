@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+import { Background } from './models/wheel.model';
 
 @Injectable({
     providedIn: 'root'
@@ -22,14 +23,41 @@ export class WheelService {
         'Die man van Waku Waku'
     ]);
 
+    public backgrounds: Background[] = [
+        {
+            image: 'sicko.jpg',
+            css: ''
+        },
+        {
+            image: 'sicko-black.jpg',
+            css: ''
+        },
+        {
+            image: 'black.jpg',
+            css: ''
+        },
+        {
+            image: 'bank.png',
+            css: ''
+        }
+    ]
+
+    public activeBackground = new BehaviorSubject<Background>(
+        {
+            image: 'black.jpg',
+            css: ''
+        }
+    )
+
+
     constructor() {}
 
     setTitle(title: string): void {
-        this.title.next(title)
+        this.title.next(title);
     }
 
     resetTitle(): void {
-        this.title.next(this.defaultTitle)
+        this.title.next(this.defaultTitle);
     }
 
     addWheelItem(item: string):void {
@@ -38,5 +66,10 @@ export class WheelService {
         }
 
         this.wheelItems.next(this.wheelItems.getValue().concat(item));
+    }
+
+    setBackground(newBackground: Background): void {
+        this.activeBackground.next(newBackground);
+
     }
 }

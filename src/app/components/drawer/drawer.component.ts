@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./drawer.component.scss']
 })
 export class DrawerComponent implements OnInit {
-    public drawerIsOpen = false;
+    public drawerIsOpen = true;
 
     constructor() {
         document.addEventListener('keypress', (e:KeyboardEvent) => {

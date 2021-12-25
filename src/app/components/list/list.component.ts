@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Background } from 'src/app/models/wheel.model';
 import { WheelService } from 'src/app/wheel.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { WheelService } from 'src/app/wheel.service';
 export class ListComponent implements OnInit {
     public title: string = '';
     public wheelItems: string[] = [];
+    public backgrounds: Background[] = [];
 
     constructor(
         private wheelService: WheelService
@@ -16,7 +18,8 @@ export class ListComponent implements OnInit {
 
     ngOnInit(): void {
         this.getTitle();
-        this.getList();
+        this.getWheelList();
+        this.getBackgrounds();
     }
 
     getTitle(): void {
@@ -27,11 +30,19 @@ export class ListComponent implements OnInit {
         this.wheelService.setTitle(newTitle);
     }
 
-    getList(): void {
+    getWheelList(): void {
         this.wheelService.wheelItems.subscribe(wheelItems => this.wheelItems = wheelItems);
     }
 
     addWheelItem(item: string): void {
         this.wheelService.addWheelItem(item);
+    }
+
+    getBackgrounds(): void {
+        this.backgrounds = this.wheelService.backgrounds;
+    }
+
+    setBackground(newBackground: Background){
+        this.wheelService.setBackground(newBackground);
     }
 }

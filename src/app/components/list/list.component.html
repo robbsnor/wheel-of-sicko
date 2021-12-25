@@ -4,12 +4,21 @@
         <input #newItem type="text" placeholder="Markel Borsato"  class="form__input">
         <button (click)="addWheelItem(newItem.value)" class="form__button"><i-feather name="plus"></i-feather></button>
     </div>
+    <p></p>
+    <p></p>
+
+    <h2>Achtergrondjes</h2>
+    <div #background *ngFor="let background of backgrounds" (click)="setBackground(background)" class="background" style="background-image: url('/assets/backgrounds/{{background.image}}');"></div>
+    <p></p>
+    <p></p>
 
 
 
     <h2>Titel</h2>
     <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
     <small>{{ title }}</small>
+    <p></p>
+    <p></p>
 
 
     <h2>Nu in het rad</h2>
