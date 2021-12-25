@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WheelService } from 'src/app/wheel.service';
 
 @Component({
-    selector: 'app-list',
+    selector: 'sicko-list',
     templateUrl: './list.component.html',
     styleUrls: ['./list.component.scss']
 })

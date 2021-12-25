@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-drawer',
+    selector: 'sicko-drawer',
     templateUrl: './drawer.component.html',
     styleUrls: ['./drawer.component.scss']
 })

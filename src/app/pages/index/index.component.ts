@@ -4,7 +4,7 @@ import { WheelService } from 'src/app/wheel.service';
 
 
 @Component({
-    selector: 'app-index',
+    selector: 'sico-index',
     templateUrl: './index.component.html',
     styleUrls: ['./index.component.scss']
 })
