@@ -6,7 +6,8 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 })
 export class WheelService {
 
-    public title = new BehaviorSubject('Wheel Of Sicko');
+    private defaultTitle = 'Wheel Of Sicko';
+    public title = new BehaviorSubject(this.defaultTitle);
     public wheelItems = new BehaviorSubject([
         'Pino',
         'Buurman en Buurman',
@@ -23,8 +24,12 @@ export class WheelService {
 
     constructor() {}
 
-    setTitle(title: string) {
+    setTitle(title: string): void {
         this.title.next(title)
+    }
+
+    resetTitle(): void {
+        this.title.next(this.defaultTitle)
     }
 
     addWheelItem(item: string):void {
