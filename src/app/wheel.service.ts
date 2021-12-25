@@ -6,8 +6,7 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 })
 export class WheelService {
 
-    private title = new BehaviorSubject('Wheel Of Sicko');
-    title$ = this.title.asObservable();
+    public title = new BehaviorSubject('Wheel Of Sicko');
 
     public list: string[] = [
         'Pino',

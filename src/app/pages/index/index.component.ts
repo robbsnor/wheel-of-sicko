@@ -15,7 +15,7 @@ export class IndexComponent implements OnInit {
         private wheelService: WheelService,
         private titleService:Title
     ) {
-        this.wheelService.title$.subscribe(title =>
+        this.wheelService.title.subscribe(title =>
             this.titleService.setTitle(title)
         )
     }

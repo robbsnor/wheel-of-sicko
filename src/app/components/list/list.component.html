@@ -8,7 +8,7 @@
 
 
     <h2>Titel</h2>
-    <input type="text" #newTitle (input)="setTitle(newTitle.value)" class="form__input">
+    <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
     <small>{{ title }}</small>
 
 

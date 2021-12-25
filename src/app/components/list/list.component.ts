@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.wheelService.title$.subscribe(title => this.title = title)
+        this.wheelService.title.subscribe(title => this.title = title)
 
         this.wheelService.getList().subscribe(list => {
             this.list = list;
