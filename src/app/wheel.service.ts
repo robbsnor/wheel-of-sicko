@@ -72,12 +72,22 @@ export class WheelService {
         this.title.next(this.defaultTitle);
     }
 
-    addWheelItem(item: string):void {
+    addWheelItem(item: string): void {
         if (this.wheelItems.getValue().includes(item)) {
             return;
         }
 
         this.wheelItems.next(this.wheelItems.getValue().concat(item));
+    }
+
+    deleteWheelItem(item: string): void {
+        const newWheelItems: string[] = this.wheelItems.getValue();
+
+        newWheelItems.forEach((originalWheelItem, index) => {
+          if (originalWheelItem === item) { newWheelItems.splice(index, 1); }
+        });
+
+        this.wheelItems.next(newWheelItems);
     }
 
     setBackground(newBackground: Background): void {

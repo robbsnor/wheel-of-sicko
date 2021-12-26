@@ -25,7 +25,7 @@
     <ul>
         <li *ngFor="let item of wheelItems" class="form__group">
             <span class="form__input">{{ item }}</span>
-            <button class="form__button"><i-feather name="x"></i-feather></button>
+            <button (click)="deleteWheelItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
 </sicko-drawer>

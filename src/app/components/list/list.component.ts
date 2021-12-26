@@ -35,4 +35,10 @@ export class ListComponent implements OnInit {
     addWheelItem(item: string): void {
         this.wheelService.addWheelItem(item);
     }
+
+    deleteWheelItem(item: string): void {
+        console.log(item);
+
+        this.wheelService.deleteWheelItem(item);
+    }
 }
