@@ -5,21 +5,11 @@
         <button (click)="addWheelItem(newItem.value)" class="form__button"><i-feather name="plus"></i-feather></button>
     </div>
     <p></p>
-    <p></p>
-
-    <h2>Achtergrondjes</h2>
-    <sicko-background-picker></sicko-background-picker>
-    <p></p>
-    <p></p>
-
-
 
     <h2>Titel</h2>
     <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
-    <small>{{ title }}</small>
     <p></p>
     <p></p>
-
 
     <h2>Nu in het rad</h2>
     <ul>
@@ -28,4 +18,11 @@
             <button (click)="deleteWheelItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
+    <p></p>
+    <p></p>
+
+    <h2>Achtergrondjes</h2>
+    <sicko-background-picker></sicko-background-picker>
+    <p></p>
+    <p></p>
 </sicko-drawer>
