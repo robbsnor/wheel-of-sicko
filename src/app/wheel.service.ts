@@ -20,29 +20,35 @@ export class WheelService {
         'Freek Fonk',
         'Bear Gryls',
         'Jochem Meijer',
-        'pannekoek',
+        'Pannekoek',
+        'Danny',
         'Die man van Waku Waku'
     ]);
 
     public backgrounds: Background[] = [
         {
             image: 'sicko.jpg',
+            thumbnail: 'sicko-thumbnail.jpg',
             css: ''
         },
         {
             image: 'sicko-black.jpg',
+            thumbnail: 'sicko-black-thumbnail.jpg',
             css: ''
         },
         {
             image: 'black.jpg',
+            thumbnail: 'black.jpg',
             css: ''
         },
         {
             image: 'bank.png',
+            thumbnail: 'bank.png',
             css: ''
         },
         {
             image: 'Wizzy-Woppy.jpg',
+            thumbnail: 'Wizzy-Woppy.jpg',
             css: ''
         }
     ]
