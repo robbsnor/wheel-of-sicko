@@ -6,11 +6,6 @@
     </div>
     <p></p>
 
-    <h2>Titel</h2>
-    <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
-    <p></p>
-    <p></p>
-
     <h2>Nu in het rad</h2>
     <ul>
         <li *ngFor="let item of wheelItems" class="form__group">
@@ -18,6 +13,13 @@
             <button (click)="deleteWheelItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
+    <p></p>
+    <p></p>
+
+    <h1>Opties</h1>
+
+    <h2>Titel</h2>
+    <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
     <p></p>
     <p></p>
 
