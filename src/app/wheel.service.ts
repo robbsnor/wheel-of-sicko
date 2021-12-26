@@ -21,6 +21,7 @@ export class WheelService {
         'Bear Gryls',
         'Jochem Meijer',
         'Pannekoek',
+        'Tepellikker',
         'Danny',
         'Die man van Waku Waku'
     ]);
