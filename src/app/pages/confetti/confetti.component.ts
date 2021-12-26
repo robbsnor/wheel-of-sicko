@@ -16,10 +16,9 @@ export class ConfettiComponent implements OnInit {
     }
 
     doTheConfetti(): void {
-        var colors = ['#bb0000', '#ffffff'];
-        var colors = ['#ffd900', '#ff002b', '#ffffff'];
+        const colors = ['#ffd900', '#ff002b', '#ffffff'];
 
-        var myConfetti = confetti.create(this.ConfettiCanvas, {
+        const myConfetti = confetti.create(this.ConfettiCanvas, {
             resize: true,
             useWorker: true
         });
