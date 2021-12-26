@@ -14,16 +14,19 @@
         right: 0;
         bottom: 0;
         left: 0;
-
-        // background-image: url('/assets/img/sicko.jpg');
-        // opacity: .5;
-        // background-size: cover;
-        background-repeat: repeat;
-        background-size: 300px;
-        animation: sickoBg 20s linear infinite;
-        background-position: 0 0;
-
         z-index: 1;
+
+        &--animated {
+            background-repeat: repeat;
+            background-size: 300px;
+            animation: slide 20s linear infinite;
+        }
+
+        &--static {
+            opacity: .5;
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     &__container {
@@ -47,10 +50,11 @@
         background-color: white;
         border-radius: 999px;
         margin: 0 auto;
-        margin-top: 200px;
+        margin-top: 100px;
         display: grid;
         color: black;
         place-items: center;
+        overflow: hidden;
 
         @include screen (1000px) {
             width: 300px;
@@ -59,7 +63,7 @@
     }
 }
 
-@keyframes sickoBg {
+@keyframes slide {
 
     to {
         background-position: 600px 300px;

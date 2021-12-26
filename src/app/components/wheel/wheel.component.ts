@@ -24,19 +24,15 @@ export class WheelComponent implements OnInit {
         this.getActiveBackground();
     }
 
-    getTitle() {
+    getTitle(): void {
         this.wheelService.title.subscribe(title => this.title = title);
     }
 
-    getWheelItems() {
+    getWheelItems(): void {
         this.wheelService.wheelItems.subscribe(wheelItems => this.wheelItems = wheelItems);
     }
 
-    getActiveBackground() {
+    getActiveBackground(): void {
         this.wheelService.activeBackground.subscribe(background => this.background = background);
     }
-
-
-
-
 }

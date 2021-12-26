@@ -1,5 +1,5 @@
 <div class="wheel">
-    <div class="wheel__background" style="background-image: url('/assets/backgrounds/{{background.image}}')" ></div>
+    <div [class]="'wheel__background--' + background.type" class="wheel__background" style="background-image: url('/assets/backgrounds/{{background.image}}')"></div>
 
     <div class="wheel__container">
         <h1 class="wheel__title">{{ title }}</h1>

@@ -30,37 +30,37 @@ export class WheelService {
         {
             image: 'sicko.jpg',
             thumbnail: 'sicko-thumbnail.jpg',
-            css: ''
+            type: 'animated'
         },
         {
             image: 'sicko-black.jpg',
             thumbnail: 'sicko-black-thumbnail.jpg',
-            css: ''
+            type: 'animated'
         },
         {
             image: 'black.jpg',
             thumbnail: 'black.jpg',
-            css: ''
+            type: 'static'
         },
         {
             image: 'bank.png',
             thumbnail: 'bank.png',
-            css: ''
+            type: 'static'
         },
         {
             image: 'Wizzy-Woppy.jpg',
             thumbnail: 'Wizzy-Woppy.jpg',
-            css: ''
+            type: 'static'
         }
     ]
 
     public activeBackground = new BehaviorSubject<Background>(
         {
             image: 'sicko.jpg',
-            css: ''
+            thumbnail: 'sicko-thumbnail.jpg',
+            type: 'animated'
         }
     )
-
 
     constructor() {}
 
