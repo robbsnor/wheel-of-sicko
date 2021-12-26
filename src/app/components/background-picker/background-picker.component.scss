@@ -1,11 +1,17 @@
 .backgrounds {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 
     &__background {
-        width: 200px;
         height: 180px;
-        border-radius: 5px;
+        border-radius: 10px;
         background-size: cover;
         background-position: center;
+        transition: .2s;
+
+        &:hover {
+           box-shadow: inset 0px 0px 14px 5px rgb(25, 2, 58)
+        }
     }
 }

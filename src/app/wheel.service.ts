@@ -20,6 +20,7 @@ export class WheelService {
         'Freek Fonk',
         'Bear Gryls',
         'Jochem Meijer',
+        'pannekoek',
         'Die man van Waku Waku'
     ]);
 
@@ -38,6 +39,10 @@ export class WheelService {
         },
         {
             image: 'bank.png',
+            css: ''
+        },
+        {
+            image: 'Wizzy-Woppy.jpg',
             css: ''
         }
     ]
