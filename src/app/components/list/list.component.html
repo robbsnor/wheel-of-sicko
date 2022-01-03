@@ -1,30 +1,29 @@
 <sicko-drawer>
-    <h2>Voeg een naam toe aan het rad</h2>
-    <div class="form__group">
-        <input #newItem type="text" placeholder="Markel Borsato"  class="form__input">
-        <button (click)="addWheelItem(newItem.value)" class="form__button form__button--square"><i-feather name="plus"></i-feather></button>
+    <div class="list__section">
+        <h2>Voeg een naam toe aan het rad</h2>
+        <div class="form__group">
+            <input #newItem type="text" placeholder="Een leuk naampje..."  class="form__input">
+            <button (click)="addWheelItem(newItem.value); newItem.value=''; newItem.focus()" class="form__button form__button--square"><i-feather name="plus"></i-feather></button>
+        </div>
+
+        <h2>Nu in het rad</h2>
+        <ul *ngIf="wheelItems.length">
+            <li *ngFor="let item of wheelItems; let i = index; trackBy: trackByFn" class="form__group">
+                <input #newItem type="text" class="form__input" [value]="item" (input)="editItem(i, newItem.value)">
+                <button (click)="deleteWheelItem(item)" class="form__button form__button--square"><i-feather name="x"></i-feather></button>
+            </li>
+        </ul>
+        <div *ngIf="!wheelItems.length" class="wheel-items-empty">
+            <small>Geen naampjes in het rad, voeg een naampje toe makker...</small>
+        </div>
     </div>
-    <p></p>
 
-    <h2>Nu in het rad</h2>
-    <ul>
-        <li *ngFor="let item of wheelItems; let i = index; trackBy: trackByFn" class="form__group">
-            <input #newItem type="text" placeholder="Markel Borsato" class="form__input" [value]="item" (input)="editItem(i, newItem.value)">
-            <button (click)="deleteWheelItem(item)" class="form__button form__button--square"><i-feather name="x"></i-feather></button>
-        </li>
-    </ul>
-    <p></p>
-    <p></p>
+    <div class="list__section">
+        <h1>Opties</h1>
+        <h2>Titel</h2>
+        <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
 
-    <h1>Opties</h1>
-
-    <h2>Titel</h2>
-    <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
-    <p></p>
-    <p></p>
-
-    <h2>Achtergrondjes</h2>
-    <sicko-background-picker></sicko-background-picker>
-    <p></p>
-    <p></p>
+        <h2>Achtergrondjes</h2>
+        <sicko-background-picker></sicko-background-picker>
+    </div>
 </sicko-drawer>

@@ -12,8 +12,7 @@ export class WheelService {
     public wheelItems = new BehaviorSubject([
         'Pino',
         'Buurman en Buurman',
-        'Charmander',
-        'Die man van Waku Waku'
+        'Charmander'
     ]);
 
     public backgrounds: Background[] = [

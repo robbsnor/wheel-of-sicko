@@ -1,0 +1,14 @@
+.list {
+
+    &__section {
+        padding-bottom: 60px;
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+
+        &--small {
+            padding-bottom: 30px;
+        }
+    }
+}
