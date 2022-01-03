@@ -6,7 +6,7 @@
             <button (click)="addWheelItem(newItem.value); newItem.value=''; newItem.focus()" class="form__button form__button--square"><i-feather name="plus"></i-feather></button>
         </div>
 
-        <h2>Nu in het rad</h2>
+        <h2>Nu in het rad ({{ wheelItems.length }})</h2>
         <ul *ngIf="wheelItems.length">
             <li *ngFor="let item of wheelItems; let i = index; trackBy: trackByFn" class="form__group">
                 <input #newItem type="text" class="form__input" [value]="item" (input)="editItem(i, newItem.value)">
