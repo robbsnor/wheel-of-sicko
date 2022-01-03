@@ -41,4 +41,12 @@ export class ListComponent implements OnInit {
 
         this.wheelService.deleteWheelItem(item);
     }
+
+    editItem(i: number, newValue: string): void  {
+        this.wheelService.editItem(i, newValue);
+    }
+
+    trackByFn(index: number): number {
+        return index;
+    }
 }

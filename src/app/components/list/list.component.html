@@ -2,15 +2,15 @@
     <h2>Voeg een naam toe aan het rad</h2>
     <div class="form__group">
         <input #newItem type="text" placeholder="Markel Borsato"  class="form__input">
-        <button (click)="addWheelItem(newItem.value)" class="form__button"><i-feather name="plus"></i-feather></button>
+        <button (click)="addWheelItem(newItem.value)" class="form__button form__button--square"><i-feather name="plus"></i-feather></button>
     </div>
     <p></p>
 
     <h2>Nu in het rad</h2>
     <ul>
-        <li *ngFor="let item of wheelItems" class="form__group">
-            <span class="form__input">{{ item }}</span>
-            <button (click)="deleteWheelItem(item)" class="form__button"><i-feather name="x"></i-feather></button>
+        <li *ngFor="let item of wheelItems; let i = index; trackBy: trackByFn" class="form__group">
+            <input #newItem type="text" placeholder="Markel Borsato" class="form__input" [value]="item" (input)="editItem(i, newItem.value)">
+            <button (click)="deleteWheelItem(item)" class="form__button form__button--square"><i-feather name="x"></i-feather></button>
         </li>
     </ul>
     <p></p>

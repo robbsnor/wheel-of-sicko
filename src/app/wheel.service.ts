@@ -13,16 +13,6 @@ export class WheelService {
         'Pino',
         'Buurman en Buurman',
         'Charmander',
-        'Karbonkel',
-        'Mario',
-        'Luigi',
-        'Kapitein koek',
-        'Freek Fonk',
-        'Bear Gryls',
-        'Jochem Meijer',
-        'Pannekoek',
-        'Tepel Likker',
-        'Danny',
         'Die man van Waku Waku'
     ]);
 
@@ -92,6 +82,13 @@ export class WheelService {
 
     setBackground(newBackground: Background): void {
         this.activeBackground.next(newBackground);
+    }
 
+    editItem(i: number, newValue: string): void {
+        const wheelItems = this.wheelItems.getValue();
+
+        wheelItems[i] = newValue;
+
+        this.wheelItems.next(wheelItems);
     }
 }
