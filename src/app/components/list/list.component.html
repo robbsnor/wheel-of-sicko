@@ -21,7 +21,9 @@
     <div class="list__section">
         <h1>Opties</h1>
         <h2>Titel</h2>
-        <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
+        <div class="form__group">
+            <input type="text" #newTitle (input)="setTitle(newTitle.value)" [value]="title" class="form__input">
+        </div>
 
         <h2>Achtergrondjes</h2>
         <sicko-background-picker></sicko-background-picker>
